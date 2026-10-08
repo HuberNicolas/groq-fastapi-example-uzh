@@ -1,0 +1,22 @@
+[project]
+name = "groq-fastapi-example"
+version = "0.1.0"
+description = "Minimal FastAPI example that calls an LLM through the Groq API"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+authors = [{ name = "Nicolas Huber", email = "nicolas.huber.dev@gmail.com" }]
+dependencies = [
+    "fastapi==0.114.1",
+    "groq==0.11.0",
+    "python-dotenv==1.0.1",
+    "uvicorn==0.30.6",
+]
+
+[dependency-groups]
+dev = ["ruff"]
+
+[tool.uv]
+package = false
+# Resolve dependencies as they were when the example was written (September 2024).
+exclude-newer = "2024-09-13T00:00:00Z"

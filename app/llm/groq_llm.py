@@ -1,10 +1,11 @@
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 from groq import Groq
 
-# Read GROQ_API_KEY (and optionally GROQ_MODEL) from a .env file in the working directory or from the environment.
-load_dotenv()
+# Read GROQ_API_KEY (and optionally GROQ_MODEL) from the .env file in the repository root or from the environment.
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 api_key = os.environ.get("GROQ_API_KEY")
 if not api_key:

@@ -32,5 +32,5 @@ def version():
 
 
 @app.get("/fastapi-version")
-def version():
+def get_fastapi_version():
     return {"version": fastapi_version}

@@ -20,3 +20,10 @@ dev = ["ruff"]
 package = false
 # Resolve dependencies as they were when the example was written (September 2024).
 exclude-newer = "2024-09-13T00:00:00Z"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

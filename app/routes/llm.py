@@ -3,6 +3,7 @@ from fastapi import APIRouter
 
 import json
 from app.llm.groq_llm import client as gclient
+from app.llm.groq_llm import model
 
 
 log = logging.getLogger(__name__)
@@ -33,7 +34,7 @@ def get_groq_poem(country: str):
 
         # Generate the poem using the modified messages
         chat_completion = client_instance.chat.completions.create(
-            model="llama3-8b-8192",
+            model=model,
             messages=messages_data["messages"]
         )
 
